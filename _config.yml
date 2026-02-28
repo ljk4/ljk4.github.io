@@ -44,12 +44,12 @@ social:
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   # 更改为您的全名/昵称，它将用作文章默认作者以及页脚显示的版权声明所有者
   name: 刘健康
-  email: example@domain.com # change to your email address / 填入您的电子邮件地址
+  email: ljk4360@outlook.com # change to your email address / 填入您的电子邮件地址
   links:
     # The first element serves as the copyright owner's link
     # 下面的第一个元素用作点击作者版权时跳转的链接
-    - https://twitter.com/username # change to your Twitter homepage / 更改为您的推特或主页链接
-    - https://github.com/username # change to your GitHub homepage / 您的 GitHub 主页链接
+    # - https://twitter.com/username # change to your Twitter homepage / 更改为您的推特或主页链接
+    - https://github.com/ljk4 # change to your GitHub homepage / 您的 GitHub 主页链接
     # Uncomment below to add more social links
     # 取消下方的注释以添加更多社交链接
     # - https://www.facebook.com/username
@@ -121,7 +121,7 @@ cdn:
 # the avatar on sidebar, support local or CORS resources
 # 头像设置（显示于左侧边栏顶端），支持本地相对路径或跨域 URL。
 # 示例: /assets/img/avatar.png 或 https://example.com/avatar.jpg
-avatar:
+avatar: assets/img/favicons/web-app-manifest-512x512.png
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
