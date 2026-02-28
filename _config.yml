@@ -14,7 +14,7 @@ lang: zh-CN
 
 # Change to your timezone › https://zones.arilyn.cc
 # 更改为您所在的时区。示例：Asia/Shanghai
-timezone:Asia/Shanghai
+timezone: Asia/Shanghai
 
 # jekyll-seo-tag settings
 # 搜索引擎优化(SEO) 插件设置 › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
@@ -24,7 +24,8 @@ title: 我的博客 # the main title / 网站主标题。示例：我的博客
 
 tagline: 分享技术与生活 # it will display as the subtitle / 显示为副标题。示例：分享技术与生活
 
-description: >- # used by seo meta and the atom feed / 站点描述，用于 SEO 元数据和 Atom/RSS 订阅。
+description:
+  >- # used by seo meta and the atom feed / 站点描述，用于 SEO 元数据和 Atom/RSS 订阅。
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
 
 # Fill in the protocol & hostname for your site.
