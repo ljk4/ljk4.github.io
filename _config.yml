@@ -256,11 +256,11 @@ exclude:
 jekyll-archives:
   enabled: [categories, tags]
   layouts:
-    category: # 分类名称 category
+    category: category # 分类名称
     tag: tag
   permalinks:
     tag: /tags/:name/
-    category: # 分类名称 /categories/:name/
+    category: /categories/:name/ # 分类名称
 
 # 下面是jekyll_compose插件的配置，提供一些命令行工具来帮助创建新的文章、页面等。
 jekyll_compose:
