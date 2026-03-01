@@ -25,12 +25,3 @@ package-lock.json
 # Misc
 _sass/vendors
 assets/js/dist
-
-# 常用命令记录
-cmd.md
-
-# 草稿
-_drafts
-
-# 一些个人文件
-assets/md
