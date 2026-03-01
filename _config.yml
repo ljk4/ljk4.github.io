@@ -261,3 +261,26 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: # 分类名称 /categories/:name/
+
+# 下面是jekyll_compose插件的配置，提供一些命令行工具来帮助创建新的文章、页面等。
+jekyll_compose:
+  auto_open: true # Automatically open the new file in the editor after creation. / 创建新文件后自动在编辑器中打开
+  default_front_matter:
+    drafts:
+      description: ""
+      image: ""
+      category: [TOP_CATEGORY, SUB_CATEGORY]
+      tags: [new, draft]
+    posts:
+      description: ""
+      image: ""
+      category: [TOP_CATEGORY, SUB_CATEGORY]
+      tags: [new, draft]
+      published: false
+      sitemap: false
+    # 针对自定义集合 'things' 的配置
+    things:
+      description: ""
+      image: ""
+      category: [TOP_CATEGORY, SUB_CATEGORY]
+      tags: [new, draft]

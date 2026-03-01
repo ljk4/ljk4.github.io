@@ -3,25 +3,28 @@
   "image": "mcr.microsoft.com/devcontainers/jekyll:2-bullseye",
   "onCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
   "postCreateCommand": "bash .devcontainer/post-create.sh",
+  "containerEnv": {
+    "HTTP_PROXY": "http://host.docker.internal:7897",
+    "HTTPS_PROXY": "http://host.docker.internal:7897",
+    "NO_PROXY": "localhost,127.0.0.1,::1,host.docker.internal"
+  },
   "customizations": {
     "vscode": {
       "settings": {
-        "terminal.integrated.defaultProfile.linux": "zsh"
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "http.proxy": "http://host.docker.internal:7897",
+        "https.proxy": "http://host.docker.internal:7897",
+        "http.proxySupport": "override"
       },
       "extensions": [
-        // Liquid tags auto-complete
         "killalau.vscode-liquid-snippets",
-        // Liquid syntax highlighting and formatting
         "Shopify.theme-check-vscode",
-        // Shell
         "timonwong.shellcheck",
         "mkhl.shfmt",
-        // Common formatter
         "EditorConfig.EditorConfig",
         "esbenp.prettier-vscode",
         "stylelint.vscode-stylelint",
         "yzhang.markdown-all-in-one",
-        // Git
         "mhutchie.git-graph"
       ]
     }
