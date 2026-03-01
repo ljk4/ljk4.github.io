@@ -269,18 +269,18 @@ jekyll_compose:
     drafts:
       description: ""
       image: ""
-      category: [TOP_CATEGORY, SUB_CATEGORY]
-      tags: [new, draft]
+      category: ""
+      tags: []
     posts:
       description: ""
       image: ""
-      category: [TOP_CATEGORY, SUB_CATEGORY]
-      tags: [new, draft]
+      category: ""
+      tags: []
       published: false
       sitemap: false
     # 针对自定义集合 'things' 的配置
     things:
       description: ""
       image: ""
-      category: [TOP_CATEGORY, SUB_CATEGORY]
-      tags: [new, draft]
+      category: ""
+      tags: []
