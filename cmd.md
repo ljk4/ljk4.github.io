@@ -1,7 +1,7 @@
 # 本地查看网页修改效果
 bundle exec jekyll serve
 # 创建博客
-bundle exec jekyll compose "安装并配置WSL与docker" --post
+bundle exec jekyll compose "c++笔记" --post
 bundle exec jekyll compose "My New Post" --collection "posts"
 # 创建草稿
 bundle exec jekyll compose "RM工程组经历" --collection "drafts"

@@ -1,69 +1,73 @@
 ---
 layout: post
-title: 为WSL和Docker配置代理
+title: WSL和Docker配置代理
 date: 2026-03-08 00:26 +0800
-description: ''
-image: ''
-category: ''
-tags: []
+description: 为WSL和Docker配置HTTP/HTTPS代理
+category: '教程'
+tags: [WSL, Docker, 代理, 网络配置]
 published: false
 sitemap: false
 ---
-在 WSL 中为 Docker 配置代理可以帮助解决网络访问问题，尤其是在需要通过代理访问外部资源时。以下是详细的配置步骤。
 
-1. 配置 WSL 的代理
+## 配置WSL代理
 
-步骤 1: 修改 .wslconfig 文件
+### 1. 修改.wslconfig文件
 
-在宿主机的用户目录下创建或编辑 .wslconfig 文件，添加以下内容：
-
+在Windows用户目录创建/编辑`.wslconfig`文件：
+```ini
 [wsl2]
 networkingMode=mirrored
 autoProxy=true
 localhostForwarding=true
 dnsTunneling=true
+```
 
-步骤 2: 设置环境变量
+### 2. 设置环境变量
 
-编辑 WSL 的 ~/.bashrc 文件，在末尾添加以下内容：
+编辑`~/.bashrc`文件，添加（7890替换为自己代理的端口，下同）：
+```bash
+export HTTP_PROXY="http://localhost:7890"
+export HTTPS_PROXY="http://localhost:7890"
+```
 
-export HTTP_PROXY="http://localhost:10809"
-export HTTPS_PROXY="http://localhost:10809"
-
-然后运行以下命令使更改生效：
-
+使配置生效：
+```bash
 source ~/.bashrc
+```
 
-1. 配置 Docker 的代理
+## 配置Docker代理
 
-步骤 1: 创建代理配置文件
+### 1. 创建配置文件
 
-在 WSL 中运行以下命令创建 Docker 守护进程的代理配置文件：
-
+```bash
 sudo mkdir -p /etc/systemd/system/docker.service.d
-sudo vi /etc/systemd/system/docker.service.d/http-proxy.conf
+sudo nano /etc/systemd/system/docker.service.d/http-proxy.conf
+```
 
-步骤 2: 添加代理设置
+### 2. 添加代理设置
 
-在文件中写入以下内容：
-
+在文件中写入：
+```ini
 [Service]
-Environment="HTTP_PROXY=http://localhost:10809/"
-Environment="HTTPS_PROXY=http://localhost:10809/"
+Environment="HTTP_PROXY=http://localhost:7890/"
+Environment="HTTPS_PROXY=http://localhost:7890/"
+```
 
-步骤 3: 重启 Docker 服务
+### 3. 重启Docker
 
-执行以下命令以应用更改：
-
+```bash
 sudo systemctl daemon-reload
 sudo systemctl restart docker
+```
 
-1. 验证配置
+## 验证配置
 
-测试网络连接是否通过代理：
-
+### 测试网络连接
+```bash
 curl -I https://www.google.com
+```
 
-检查 Docker 是否正常工作：
-
+### 测试Docker
+```bash
 docker run hello-world
+```
