@@ -45,10 +45,25 @@ jobs:
           ruby-version: 3.3
           bundler-cache: true
 
+      # ========== 新增步骤：生成 Giscus 敏感配置文件 ==========
+      - name: Create Giscus config with secrets
+        env:
+          GISCUS_REPO_ID: ${{ secrets.GISCUS_REPO_ID }}
+          GISCUS_CATEGORY_ID: ${{ secrets.GISCUS_CATEGORY_ID }}
+        run: |
+          cat > _config_giscus.yml << EOF
+          comments:
+            giscus:
+              repo_id: $GISCUS_REPO_ID
+              category_id: $GISCUS_CATEGORY_ID
+          EOF
+      # ======================================================
+      # ========== 修改构建命令，合并配置文件 ==========
       - name: Build site
-        run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
+        run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}" --config _config.yml,_config_giscus.yml
         env:
           JEKYLL_ENV: "production"
+      # =============================================
 
       - name: Test site
         run: |

@@ -30,3 +30,6 @@ assets/js/dist
 
 # 草稿
 _drafts
+
+# 安全注入文件
+_config_dev.yml

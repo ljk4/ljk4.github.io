@@ -1,5 +1,5 @@
 # 本地查看网页修改效果
-bundle exec jekyll serve
+bundle exec jekyll serve --config _config.yml,_config_dev.yml
 # 创建博客
 bundle exec jekyll compose "c++笔记" --post
 bundle exec jekyll compose "My New Post" --collection "posts"

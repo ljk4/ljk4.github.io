@@ -136,7 +136,7 @@ toc: true
 comments:
   # Global switch for the post-comment system. Keeping it empty means disabled.
   # 评论系统全局开关。留空即视为禁用评论功能。
-  provider: # [disqus | utterances | giscus]
+  provider: giscus # [disqus | utterances | giscus]
   # The provider options are as follows:
   # 各家评论服务提供商的设置选项如下：
   disqus:
@@ -147,15 +147,15 @@ comments:
     issue_term: # < url | pathname | title | ...> / Issues 匹配规则，推荐使用 pathname
   # Giscus options › https://giscus.app (基于 Github Discussions 搭建评论区)
   giscus:
-    repo: # <gh-username>/<repo> / 填写 Github 仓库，举例: ljk4/blog-comments
+    repo: ljk4/ljk4.github.io # <gh-username>/<repo> / 填写 Github 仓库，举例: ljk4/blog-comments
     repo_id: # 您可以通过访问 giscus 官网进行授权并获取该 ID，或者留空
-    category: # 分类名称
+    category: Announcements # 分类名称
     category_id: # 分类 ID
-    mapping: # optional, default to 'pathname' / 可选项，页面映射规则，默认即可
-    strict: # optional, default to '0' / 可选项，严格匹配
-    input_position: # optional, default to 'bottom' / 输入框显示位置，top(置顶)或 bottom(置底)
-    lang: # optional, default to the value of `site.lang` / 界面语言，若留空则跟随 site.lang，也可填入如 zh-CN 强制用中文
-    reactions_enabled: # optional, default to the value of `1` / 是否允许讨论表情回应 (1 启用 / 0 关闭)
+    mapping: pathname # optional, default to 'pathname' / 可选项，页面映射规则，默认即可
+    strict: "0" # optional, default to '0' / 可选项，严格匹配
+    input_position: bottom # optional, default to 'bottom' / 输入框显示位置，top(置顶)或 bottom(置底)
+    lang: zh-CN # optional, default to the value of `site.lang` / 界面语言，若留空则跟随 site.lang，也可填入如 zh-CN 强制用中文
+    reactions_enabled: "1" # optional, default to the value of `1` / 是否允许讨论表情回应 (1 启用 / 0 关闭)
 
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
 # 自托管网站静态资源库，高级设置（非必用）
