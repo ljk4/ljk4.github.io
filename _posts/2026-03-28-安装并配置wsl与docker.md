@@ -113,19 +113,19 @@ wsl --list --verbose
 wsl -l -v
 
 # 设置特定发行版为 WSL2
-wsl --set-version <发行版名称> 2
+wsl --set-version Ubuntu-22.04 2
 
 # 设置默认发行版
-wsl --set-default <发行版名称>
+wsl --set-default Ubuntu-22.04
 
 # 注销并删除发行版（谨慎使用）
-wsl --unregister <发行版名称>
+wsl --unregister Ubuntu-22.04
 
 # 导出发行版备份
-wsl --export <发行版名称> <备份路径>.tar
+wsl --export Ubuntu-22.04 D:\tempbackup.tar
 
 # 导入发行版
-wsl --import <新名称> <安装路径> <备份文件>.tar
+wsl --import Ubuntu D:\Ubuntu D:\tempbackup.tar
 ```
 
 ### WSL 迁移到其他磁盘
