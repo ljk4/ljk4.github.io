@@ -6,8 +6,8 @@ description: ROS与MoveIt在机器人领域的应用分析，探讨其在学术�
 # image: /assets/img/default_robotics.jpg
 category: 机器人技术
 tags: [ROS, MoveIt, 机器人控制, 运动规划, 工业自动化]
-published: true
-sitemap: true
+published: false
+sitemap: false
 ---
 对文章[机械臂运动规划控制算法开发的软件架构：ROS+MoveIt 是主流吗？](https://mp.weixin.qq.com/s/6svkewF3FKmLZZxISjxLkg)的总结与分析
 
