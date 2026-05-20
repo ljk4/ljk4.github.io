@@ -1,5 +1,8 @@
 # 本地查看网页修改效果
 bundle exec jekyll serve --config _config.yml,_config_dev.yml
+# git取消代理
+git config --global --unset http.proxy
+git config --global --unset https.proxy
 # 创建博客
 bundle exec jekyll compose "dokcer使用-挂载目录与用户权限" --post
 bundle exec jekyll compose "My New Post" --collection "posts"
