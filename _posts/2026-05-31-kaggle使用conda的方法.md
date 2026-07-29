@@ -13,15 +13,15 @@ sitemap: true
 
 ## 1. 查看当前 Python 环境
 创建notebook后在单元格中运行
-```python
+```bash
 !python -V
 ```
 
 ## 2. 下载并安装 Miniconda
 
-```python
+```bash
 # 设置安装目录
-root_dir = "/kaggle/conda"
+root_dir="/kaggle/conda"
 !mkdir -p $root_dir
 
 # 切换到安装目录
@@ -39,7 +39,7 @@ root_dir = "/kaggle/conda"
 
 ## 3. 初始化 Conda
 
-```python
+```bash
 # 初始化 conda
 !$root_dir/miniconda3/bin/conda init
 
@@ -52,7 +52,7 @@ root_dir = "/kaggle/conda"
 
 ## 4. 创建 Conda 环境
 
-```python
+```bash
 # 创建名为 gvhmr 的 Python 3.10 环境
 !$root_dir/miniconda3/bin/conda create --name gvhmr python=3.10 -y
 
@@ -62,14 +62,14 @@ root_dir = "/kaggle/conda"
 
 ## 5. 进入 Conda 环境
 
-```python
+```bash
 # 激活环境
 !source $root_dir/miniconda3/bin/activate gvhmr
 ```
 
 ## 6. 安装项目依赖
 
-```python
+```bash
 # 切换到代码目录（示例路径）
 %cd /kaggle/input/datasets/some123we/gvhmr-code/GVHMR/GVHMR
 
@@ -84,7 +84,7 @@ root_dir = "/kaggle/conda"
 
 Kaggle 的 `/kaggle/input/` 目录是只读的，无法进行可编辑安装（`pip install -e .`）。需要将代码复制到 `/kaggle/working/` 目录：
 
-```python
+```bash
 # 查看当前路径
 !pwd
 
@@ -103,7 +103,7 @@ Kaggle 的 `/kaggle/input/` 目录是只读的，无法进行可编辑安装（`
 
 ## 8. 运行训练/推理命令
 
-```python
+```bash
 # 运行 demo 脚本
 !source $root_dir/miniconda3/bin/activate gvhmr; python /kaggle/working/GVHMR/tools/demo/demo_folder.py \
     -f /kaggle/input/datasets/some123we/gvhmr-code/video/data/h36m_videos \

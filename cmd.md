@@ -4,7 +4,7 @@ bundle exec jekyll serve --config _config.yml,_config_dev.yml
 git config --global --unset http.proxy
 git config --global --unset https.proxy
 # 创建博客
-bundle exec jekyll compose "dokcer使用-挂载目录与用户权限" --post
+bundle exec jekyll compose "python中matplotlib字体和负号修复" --post
 bundle exec jekyll compose "My New Post" --collection "posts"
 # 创建草稿
 bundle exec jekyll compose "RM工程组经历" --collection "drafts"

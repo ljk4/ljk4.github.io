@@ -33,3 +33,10 @@ _drafts
 
 # 安全注入文件
 _config_dev.yml
+
+# Claude Code 记忆文件
+.claude/memory/
+
+# 项目
+项目
+CLAUDE.md
