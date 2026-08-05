@@ -26,11 +26,12 @@
 ## 文章目录
 
 <!-- ARTICLES_START -->
-共 **30** 篇文章
+共 **31** 篇文章
 
 | 日期 | 标题 |
 |------|------|
-| 2026-05-31 | [python中matplotlib字体和负号修复](https://ljk4.github.io/posts/python中matplotlib字体和负号修复/) |
+| 2026-08-04 | [一些常用命令](https://ljk4.github.io/posts/一些常用命令/) |
+| 2026-08-04 | [C++复习](https://ljk4.github.io/posts/c-复习/) |
 | 2026-05-31 | [Kaggle 中使用 Conda 的方法](https://ljk4.github.io/posts/kaggle使用conda的方法/) |
 | 2026-05-20 | [Docker 使用 - 挂载目录与用户权限](https://ljk4.github.io/posts/dokcer使用-挂载目录与用户权限/) |
 | 2026-04-20 | [机械臂仿真抓取项目详解-node部分](https://ljk4.github.io/posts/机械臂仿真抓取项目详解-node部分/) |
