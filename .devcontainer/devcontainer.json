@@ -1,8 +1,16 @@
 {
   "name": "Jekyll",
-  "image": "mcr.microsoft.com/devcontainers/jekyll:2-bullseye",
+  "image": "mcr.microsoft.com/devcontainers/base:2-bookworm",
   "onCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
   "postCreateCommand": "bash .devcontainer/post-create.sh",
+  "containerEnv": {
+    "MISE_DATA_DIR": "${containerWorkspaceFolder}/.local/share/mise",
+    "MISE_CACHE_DIR": "${containerWorkspaceFolder}/.local/cache/mise",
+    "MISE_STATE_DIR": "${containerWorkspaceFolder}/.local/state/mise",
+    "MISE_CONFIG_DIR": "${containerWorkspaceFolder}/.local/config/mise",
+    "BUNDLE_APP_CONFIG": "${containerWorkspaceFolder}/.local/bundle-config",
+    "BUNDLE_PATH": "${containerWorkspaceFolder}/.local/bundle"
+  },
   "customizations": {
     "vscode": {
       "settings": {

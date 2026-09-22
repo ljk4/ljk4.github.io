@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck source=tools/project-env.sh
+source "$SCRIPT_DIR/project-env.sh"
+
+MISE="$PROJECT_ROOT/.local/bin/mise"
+
+if [[ ! -x $MISE ]]; then
+  echo "Project environment is not installed. Run: ./tools/bootstrap.sh" >&2
+  exit 1
+fi
+
+cd "$PROJECT_ROOT"
+exec "$MISE" exec -- "$@"

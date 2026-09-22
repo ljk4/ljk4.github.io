@@ -1,7 +1,9 @@
 # Bundler cache
 .bundle
 vendor
-Gemfile.lock
+
+# Project-local runtime, package cache, and tool state
+.local/
 
 # Jekyll cache
 .jekyll-cache
@@ -13,7 +15,6 @@ _site
 
 # NPM dependencies
 node_modules
-package-lock.json
 
 # IDE configurations
 .idea

@@ -1,0 +1,12 @@
+min_version = "2026.9.12"
+
+[tools]
+ruby = "3.3.12"
+
+[settings.ruby]
+compile = false
+
+[env]
+BUNDLE_APP_CONFIG = "{{ config_root }}/.local/bundle-config"
+BUNDLE_PATH = "{{ config_root }}/.local/bundle"
+GEM_SPEC_CACHE = "{{ config_root }}/.local/cache/gem/specs"

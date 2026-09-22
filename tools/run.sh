@@ -2,8 +2,10 @@
 #
 # Run jekyll serve and then launch the site
 
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 prod=false
-command="bundle exec jekyll s -l"
 host="127.0.0.1"
 
 help() {
@@ -40,15 +42,23 @@ while (($#)); do
   esac
 done
 
-command="$command -H $host"
+command=("$SCRIPT_DIR/env" bundle exec jekyll serve --livereload --host "$host")
+
+if [[ -f $SCRIPT_DIR/../_config_dev.yml ]]; then
+  command+=(--config _config.yml,_config_dev.yml)
+fi
 
 if $prod; then
-  command="JEKYLL_ENV=production $command"
+  command=(env JEKYLL_ENV=production "${command[@]}")
 fi
 
-if [ -e /proc/1/cgroup ] && grep -q docker /proc/1/cgroup; then
-  command="$command --force_polling"
+if [[ -n ${WSL_DISTRO_NAME:-} ]] || \
+  { [[ -r /proc/version ]] && grep -qi microsoft /proc/version; } || \
+  { [[ -r /proc/1/cgroup ]] && grep -q docker /proc/1/cgroup; }; then
+  command+=(--force_polling)
 fi
 
-echo -e "\n> $command\n"
-eval "$command"
+printf '\n> '
+printf '%q ' "${command[@]}"
+printf '\n\n'
+exec "${command[@]}"

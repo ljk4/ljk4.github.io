@@ -23,6 +23,31 @@
 | 评论系统       | Giscus                       |
 | 持续部署       | GitHub Actions + Pages       |
 
+## 本地开发环境
+
+项目使用 `mise` 将 Ruby、Bundler、Gem 依赖及相关缓存全部安装在仓库的
+`.local/` 目录中，不修改用户级 Ruby、Gem 或 shell 配置。
+
+宿主机只需提供 Bash、Git、curl、tar、xz、SHA-256 校验工具和基本的 HTTPS
+证书支持。Linux x86_64/arm64 与 macOS x86_64/arm64 会使用预编译 Ruby，
+无需系统级安装 Ruby 或编译器。
+
+```bash
+# 首次安装项目环境
+./tools/bootstrap.sh
+
+# 启动本地服务
+./tools/run.sh
+
+# 构建并检查站点
+./tools/test.sh
+
+# 可选：进入已激活项目环境的当前 shell
+source tools/activate.sh
+```
+
+删除 `.local/` 即可完整卸载本地环境。
+
 ## 文章目录
 
 <!-- ARTICLES_START -->

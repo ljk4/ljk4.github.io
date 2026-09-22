@@ -1,10 +1,12 @@
+# 激活环境
+source tools/activate.sh 
 # 本地查看网页修改效果
 bundle exec jekyll serve --config _config.yml,_config_dev.yml
 # git取消代理
 git config --global --unset http.proxy
 git config --global --unset https.proxy
 # 创建博客
-bundle exec jekyll compose "c++复习" --post
+bundle exec jekyll compose "VLA学习" --post
 bundle exec jekyll compose "My New Post" --collection "posts"
 # 创建草稿
 bundle exec jekyll compose "RM工程组经历" --collection "drafts"
