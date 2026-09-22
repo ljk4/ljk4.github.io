@@ -51,10 +51,12 @@ source tools/activate.sh
 ## 文章目录
 
 <!-- ARTICLES_START -->
-共 **31** 篇文章
+共 **33** 篇文章
 
 | 日期 | 标题 |
 |------|------|
+| 2026-09-22 | [VLA学习](https://ljk4.github.io/posts/vla学习/) |
+| 2026-09-20 | [transformer学习](https://ljk4.github.io/posts/transformer学习/) |
 | 2026-08-04 | [一些常用命令](https://ljk4.github.io/posts/一些常用命令/) |
 | 2026-08-04 | [C++复习](https://ljk4.github.io/posts/c-复习/) |
 | 2026-05-31 | [Kaggle 中使用 Conda 的方法](https://ljk4.github.io/posts/kaggle使用conda的方法/) |
