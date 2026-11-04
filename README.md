@@ -51,10 +51,13 @@ source tools/activate.sh
 ## 文章目录
 
 <!-- ARTICLES_START -->
-共 **33** 篇文章
+共 **36** 篇文章
 
 | 日期 | 标题 |
 |------|------|
+| rm飞镖组经历.md | [RM飞镖组经历](https://ljk4.github.io/posts//) |
+| rm自瞄改进经历.m | [RM自瞄改进经历](https://ljk4.github.io/posts//) |
+| rm工程组经历.md | [RM工程组经历](https://ljk4.github.io/posts//) |
 | 2026-09-22 | [VLA学习](https://ljk4.github.io/posts/vla学习/) |
 | 2026-09-20 | [transformer学习](https://ljk4.github.io/posts/transformer学习/) |
 | 2026-08-04 | [一些常用命令](https://ljk4.github.io/posts/一些常用命令/) |
