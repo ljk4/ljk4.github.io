@@ -55,9 +55,6 @@ source tools/activate.sh
 
 | 日期 | 标题 |
 |------|------|
-| rm飞镖组经历.md | [RM飞镖组经历](https://ljk4.github.io/posts//) |
-| rm自瞄改进经历.m | [RM自瞄改进经历](https://ljk4.github.io/posts//) |
-| rm工程组经历.md | [RM工程组经历](https://ljk4.github.io/posts//) |
 | 2026-09-22 | [VLA学习](https://ljk4.github.io/posts/vla学习/) |
 | 2026-09-20 | [transformer学习](https://ljk4.github.io/posts/transformer学习/) |
 | 2026-08-04 | [一些常用命令](https://ljk4.github.io/posts/一些常用命令/) |
@@ -77,6 +74,9 @@ source tools/activate.sh
 | 2026-03-08 | [WSL迁移到其他盘](https://ljk4.github.io/posts/wsl迁移到其他盘/) |
 | 2026-03-01 | [建站历程及问题汇总](https://ljk4.github.io/posts/建站历程及问题汇总/) |
 | 2026-03-01 | [YOLO补习](https://ljk4.github.io/posts/yolo补习/) |
+| 2026-03-01 | [RM飞镖组经历](https://ljk4.github.io/posts/rm飞镖组经历/) |
+| 2026-03-01 | [RM自瞄改进经历](https://ljk4.github.io/posts/rm自瞄改进经历/) |
+| 2026-03-01 | [RM工程组经历](https://ljk4.github.io/posts/rm工程组经历/) |
 | 2025-12-01 | [ROS智能车自主导航系统（校内赛一等奖）](https://ljk4.github.io/posts/ros智能车自主导航系统/) |
 | 2025-10-15 | [ROS2 迷宫行者：全栈路径规划游戏](https://ljk4.github.io/posts/ros2迷宫行者路径规划游戏/) |
 | 2025-10-01 | [绳驱动连续体机器人上位机控制系统](https://ljk4.github.io/posts/连续体机器人上位机控制系统/) |

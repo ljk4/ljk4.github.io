@@ -37,7 +37,7 @@ github:
   username: ljk4 # change to your GitHub username / 填入您的 GitHub 用户名
 
 twitter:
-  username: twitter_username # change to your Twitter username / 填入您的 Twitter 用户名
+  username: # change to your Twitter username / 填入您的 Twitter 用户名
 
 social:
   # Change to your full name.
@@ -250,6 +250,9 @@ exclude:
   - tools
   - README.md
   - LICENSE
+  - cmd.md
+  - mise.toml
+  - mise.lock
   - purgecss.js
   - "*.config.js"
   - "package*.json"

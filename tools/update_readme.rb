@@ -8,13 +8,14 @@
 # 脚本会替换这两个标记之间的内容。
 
 require 'yaml'
-require 'time'
 
 POSTS_DIR = File.join(__dir__, '..', '_posts')
 README_PATH = File.join(__dir__, '..', 'README.md')
 
 START_MARKER = '<!-- ARTICLES_START -->'
 END_MARKER = '<!-- ARTICLES_END -->'
+
+POST_FILENAME = /\A(\d{4}-\d{2}-\d{2})-(.+)\.md\z/
 
 def parse_front_matter(filepath)
   content = File.read(filepath, encoding: 'utf-8')
@@ -34,14 +35,20 @@ def get_all_posts
 
   Dir.glob(File.join(POSTS_DIR, '*.md')).each do |filepath|
     filename = File.basename(filepath)
-    next if filename == '.placeholder'
+    match = POST_FILENAME.match(filename)
+    unless match
+      warn "跳过文件名不符合 YYYY-MM-DD-title.md 的文章：#{filename}"
+      next
+    end
 
     fm = parse_front_matter(filepath)
-    title = fm&.dig('title') || filename
+    next if fm && fm['published'] == false
+
+    title = fm&.dig('title') || match[2]
     description = fm&.dig('description') || ''
-    date = filename[0..9] # YYYY-MM-DD
-    slug = File.basename(filename, '.md')[11..] # 去掉 YYYY-MM-DD- 前缀
-    url = "https://ljk4.github.io/posts/#{slug}/"
+    date = fm&.dig('date').to_s[0, 10]
+    date = match[1] if date.empty?
+    url = "https://ljk4.github.io/posts/#{match[2]}/"
 
     posts << { title: title, description: description.to_s, date: date, url: url }
   end

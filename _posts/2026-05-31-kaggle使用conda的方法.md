@@ -4,7 +4,7 @@ title: Kaggle 中使用 Conda 的方法
 date: 2026-05-31 22:12 +0800
 description: '在 Kaggle Notebook 中安装和配置 Miniconda，创建虚拟环境并运行项目的完整教程'
 category: [教程, Kaggle]
-tags: [kaggle, conda, miniconda, python, 虚拟环境]
+tags: [kaggle, conda, miniconda, Python, 虚拟环境]
 published: true
 sitemap: true
 ---

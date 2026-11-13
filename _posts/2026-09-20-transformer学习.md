@@ -3,11 +3,7 @@ layout: post
 title: transformer学习
 date: 2026-09-20 14:59 +0800
 description: ''
-image: ''
-category: ''
 tags: []
-published: false
-sitemap: false
 ---
 # 数据准备
 tokenization：据分词表分词，如BEP,字符级分词等

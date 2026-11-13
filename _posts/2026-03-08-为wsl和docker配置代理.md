@@ -5,8 +5,6 @@ date: 2026-03-08 00:26 +0800
 description: 为WSL和Docker配置HTTP/HTTPS代理
 category: '教程'
 tags: [WSL, Docker, 代理, 网络配置]
-published: false
-sitemap: false
 ---
 
 ## 配置WSL代理
